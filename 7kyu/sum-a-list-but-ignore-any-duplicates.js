@@ -22,25 +22,31 @@
 
 
 //version 1
-function sumNoDuplicates(numList) {
-    numList.push(0)
-    return numList.filter((el, i, arr) => {
-        for (let index = 0; index < arr.length; index++) {
-            if (i === index) {
-                continue
-            } else if (arr[index] === el){
-                return false
-            }
-        }
-        return true
-    }).reduce((acc, cur) => acc + cur)
-}
+// function sumNoDuplicates(numList) {
+//         return numList.filter((el, i, arr) => {
+//         for (let index = 0; index < arr.length; index++) {
+//             if (i === index) {
+//                 continue
+//             } else if (arr[index] === el){
+//                 return false
+//             }
+//         }
+//         return true
+//     }).reduce((acc, cur) => acc + cur, 0)
+// }
 
 
 
 
-console.log(sumNoDuplicates([1, 1, 2, 2, 3]));
+console.log(sumNoDuplicates([1, 1, 2, 3]));
 
 
 //version 2
+// function sumNoDuplicates(numList) {
+//     return numList.filter((el, i, arr) => arr.indexOf(el) === arr.lastIndexOf(el)).reduce((acc, cur) => acc + cur, 0)
+// }
 
+//version 3
+function sumNoDuplicates(numList) {
+    return numList.reduce((acc, cur) => numList.indexOf(cur) === numList.lastIndexOf(cur) ? acc + cur : acc, 0)
+}
