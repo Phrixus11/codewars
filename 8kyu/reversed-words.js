@@ -12,10 +12,16 @@
 
 let phrase = "The greatest victory is that which requires no battle"
 
-//option 1
+//version 1
 function reverseWords(str) {
     return str.split(' ').reverse().join(' ')
 }
 
 console.log(reverseWords(phrase));
 console.log(reverseWords("hello world!"));
+
+
+//version 2
+function reverseWords(str) {
+    return str.split(' ').reverse().join(' ')
+}
