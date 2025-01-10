@@ -6,17 +6,22 @@
 
 // ✅Solution:
 
-let array = [9, 3, '7', '3']
+let array = ['5', '0', 9, 3, 2, 1, '9', 6, 7]
 
-// option 1
-function sumMix(x) {
-    let sum = 0;
-    let toNumber;
-    for (let i = 0; i < x.length; i++) {
-        toNumber = +x[i]
-        sum += toNumber
-    }
-    return sum
-}
+//version 1
+// function sumMix(x) {
+//     let sum = 0;
+//     let toNumber;
+//     for (let i = 0; i < x.length; i++) {
+//         toNumber = +x[i]
+//         sum += toNumber
+//     }
+//     return sum
+// }
 
 console.log(sumMix(array));
+
+//version 2
+function sumMix(x) {
+    return x.reduce((acc, cur) => acc + Number(cur), 0)
+}
