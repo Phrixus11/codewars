@@ -6,7 +6,7 @@
 
 // ✅Solution:
 
-//option 1
+//version 1
 let phrase = 'hello'
 
 console.log(solution(phrase));
@@ -17,4 +17,10 @@ function solution(str) {
         word += str[i];       
     }
     return word
+}
+
+//version 2
+
+function solution(str) {
+    return str.split('').reverse().join('')
 }
