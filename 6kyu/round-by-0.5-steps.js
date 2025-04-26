@@ -17,9 +17,8 @@
 // ✅Solution:
 
 function solution(n) {
-    let temp = Number(n - Math.floor(n)).toFixed(2)
-    console.log(temp);
-    if (temp <= 0.74 && temp >= 0.25) {
+    let temp = n - Math.floor(n)
+    if (temp < 0.75 && temp >= 0.25) {
         return Math.floor(n) + 0.5
     } else if (temp <= 0.24) {
         return Math.floor(n)
