@@ -1,0 +1,19 @@
+// ❓Description:
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+//Tests:
+
+
+// ✅Solution:
+
+
+const solution = (string) => string.replace(/([A-Z])/g,' $1')
+
+console.log(solution('camelCasing'));
+console.log(solution('newWorldGroupAskThingMakeTryRight'));
